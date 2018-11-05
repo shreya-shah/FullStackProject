@@ -1,8 +1,0 @@
-version: '2'
-
-services:
-  front-end:
-    build: .
-    network_mode: host
-    ports:
-      - "8081:8081"

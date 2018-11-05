@@ -20,7 +20,7 @@ export class Jumbotron extends Component {
           </div>
           <div className="text-center text-light">Created By Rhea Fernandes and Shreya Shah</div>
         </div>
-        <Modal />
+
       </Fragment>
     );
   }
