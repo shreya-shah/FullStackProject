@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83e0a6fd-a0c7-45bb-b9c0-b33c02dc8a77" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/fullstackbackend/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/fullstackbackend/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stackroute/fullstackbackend/FullstackBackendApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stackroute/fullstackbackend/FullstackBackendApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stackroute/fullstackbackend/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stackroute/fullstackbackend/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stackroute/fullstackbackend/exceptions/UserAlreadyExistsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stackroute/fullstackbackend/exceptions/UserAlreadyExistsException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stackroute/fullstackbackend/exceptions/UserNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stackroute/fullstackbackend/exceptions/UserNotFoundException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stackroute/fullstackbackend/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stackroute/fullstackbackend/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stackroute/fullstackbackend/repository/UserRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stackroute/fullstackbackend/repository/UserRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stackroute/fullstackbackend/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stackroute/fullstackbackend/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stackroute/fullstackbackend/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stackroute/fullstackbackend/service/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/stackroute/fullstackbackend/controller/UserControllersTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/stackroute/fullstackbackend/controller/UserControllersTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="83e0a6fd-a0c7-45bb-b9c0-b33c02dc8a77" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -268,7 +256,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541405282551" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541405362804" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
