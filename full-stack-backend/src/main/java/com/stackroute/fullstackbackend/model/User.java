@@ -24,6 +24,17 @@ public class User {
     public User() {
     }
 
+    public User(Long id, String username, String name, Integer age, String birthdate, String description, List<Long> friends) {
+        this.id = id;
+        this.username = username;
+        this.name = name;
+        this.age = age;
+        this.birthdate = birthdate;
+        this.description = description;
+        this.friends =friends;
+
+    }
+
     public User(Long id, String username, String name, Integer age, String birthdate, String description, List<Long> friends, String imageUrl) {
         this.id = id;
         this.username = username;
@@ -91,7 +102,7 @@ public class User {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
-        
+
     public List<Long> getFriends() {
         return friends;
     }
@@ -110,6 +121,7 @@ public class User {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", birthdate='" + birthdate + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
                 ", description='" + description + '\'' +
                 ", friends=" + friends +
                 '}';
@@ -118,22 +130,22 @@ public class User {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof User)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(getId(), user.getId()) &&
-                Objects.equals(getUsername(), user.getUsername()) &&
-                Objects.equals(getName(), user.getName()) &&
-                Objects.equals(getAge(), user.getAge()) &&
-                Objects.equals(getBirthdate(), user.getBirthdate()) &&
-                Objects.equals(getDescription(), user.getDescription()) &&
-                Objects.equals(getFriends(), user.getFriends());
+        return Objects.equals(id, user.id) &&
+                Objects.equals(username, user.username) &&
+                Objects.equals(name, user.name) &&
+                Objects.equals(age, user.age) &&
+                Objects.equals(birthdate, user.birthdate) &&
+                Objects.equals(imageUrl, user.imageUrl) &&
+                Objects.equals(description, user.description) &&
+                Objects.equals(friends, user.friends);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getUsername(), getName(), getAge(), getBirthdate(), getDescription(), getFriends());
+        return Objects.hash(id, username, name, age, birthdate, imageUrl, description, friends);
     }
-
 }
 
 
