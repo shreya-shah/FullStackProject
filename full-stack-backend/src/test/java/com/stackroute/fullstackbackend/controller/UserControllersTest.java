@@ -93,7 +93,7 @@ public class UserControllersTest {
 
     @Test
     public void addUser() throws Exception {
-        User user3= new User(1l,"noor1","raksha",21,"12/6","djs",null);
+        User user3= new User(1l,"noor1","raksha",21,"12/6","djs",null,null);
         when(userService.addUser(user3)).thenReturn(user3);
         mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/adduser")
                 .contentType(MediaType.APPLICATION_JSON)

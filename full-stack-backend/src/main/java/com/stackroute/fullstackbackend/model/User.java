@@ -24,17 +24,6 @@ public class User {
     public User() {
     }
 
-    public User(Long id, String username, String name, Integer age, String birthdate, String description, List<Long> friends) {
-        this.id = id;
-        this.username = username;
-        this.name = name;
-        this.age = age;
-        this.birthdate = birthdate;
-        this.description = description;
-        this.friends =friends;
-
-    }
-
     public User(Long id, String username, String name, Integer age, String birthdate, String description, List<Long> friends, String imageUrl) {
         this.id = id;
         this.username = username;

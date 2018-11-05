@@ -42,8 +42,8 @@ public class UserServiceImplTest {
         friendlist.add(2l);
 
     //friendlist2.add(4l);
-      user1 = new User(1l,"noor123","noor",21,"23-11-96","some description",friendlist);
-        user2 = new User(2l,"aish123","aish",21,"23-07-96","some description",friendlist2);
+      user1 = new User(1l,"noor123","noor",21,"23-11-96","some description",friendlist,null);
+        user2 = new User(2l,"aish123","aish",21,"23-07-96","some description",friendlist2,null);
       list = new ArrayList<>();
         list.add(user1);
         list.add(user2);
