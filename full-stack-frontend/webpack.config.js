@@ -38,6 +38,7 @@ var config = {
     devtool: 'cheap-module-eval-source-map',
     devServer: {
         contentBase: path.join(__dirname, 'public'),
+        disableHostCheck: true,
         historyApiFallback: true,
         inline:true,
         port:8081
