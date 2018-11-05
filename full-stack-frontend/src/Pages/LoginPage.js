@@ -15,7 +15,7 @@ export default class LoginPage extends React.Component{
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8080/api/v1/getuser')
+        axios.get('http://172.23.238.178:8080/api/v1/getuser')
             .then(res=>
                     this.setState({
                         users: res.data
@@ -38,6 +38,7 @@ export default class LoginPage extends React.Component{
         const index = this.state.users.findIndex(u => u.username === this.state.username);
         console.log('index', index);
         if (index > -1) this.setState(() => ({ userPresent: true})); 
+        {(this.state.userPresent) ? <Redirect to={{pathname:"/User",state:{username:this.state.username}}}/>: <Redirect to="/loginPage" />}
     }
     
     render(){
@@ -51,7 +52,6 @@ export default class LoginPage extends React.Component{
                             <input type="text" placeholder="Enter Username" className="form-control" onChange={this.handleOnChangeInput.bind(this)}/>
                             <button className="btn btn-info" onClick={this.handleLoginUser.bind(this, this.state.username)}>Login</button>
                         </form>
-                        {(this.state.userPresent) ? <Redirect to={{pathname:"/User",state:{username:this.state.username}}}/>: <Redirect to="/loginPage" />}
                     </div>
                 </div>
             </Fragment>

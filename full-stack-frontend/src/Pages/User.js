@@ -28,9 +28,9 @@ export default class User extends Component {
     }
     )
     e.preventDefault()
-    axios.get(`http://localhost:8080/api/v1/recommendL1/${this.state.username}/1`)
+    axios.get(`http://172.23.238.178:8080/api/v1/recommendL1/${this.state.username}/1`)
       .then(res =>
-        this.setState({
+          this.setState({
           levelOne: res.data,
         })
       ).catch(err => {
@@ -43,7 +43,7 @@ export default class User extends Component {
       recommendationDisp: true
     }
     )
-    axios.get(`http://localhost:8080/api/v1/recommendL1/${this.state.username}/2`)
+    axios.get(`http://172.23.238.178:8080/api/v1/recommendL1/${this.state.username}/2`)
       .then(res =>
         this.setState({
           levelTwo: res.data,
@@ -55,7 +55,7 @@ export default class User extends Component {
 
   handledeleteUser(e) {
     e.preventDefault();
-    axios.delete(`http://localhost:8080/api/v1/deleteuser/${this.state.username}`)
+    axios.delete(`http://172.23.238.178:8080/api/v1/deleteuser/${this.state.username}`)
       .then(() => {
         console.log('Deleted User from server');
         this.setState(() => ({ userDeleted: true }));
@@ -66,10 +66,10 @@ export default class User extends Component {
       });
   }
   addFriend(friendId) {
-    axios.put(`http://localhost:8080/api/v1/addfriend/${this.state.username}/${friendId}`)
+    axios.put(`http://172.23.238.178:8080/api/v1/addfriend/${this.state.username}/${friendId}`)
     .then(res =>{
       console.log("adding a friend...")
-      axios.get(`http://localhost:8080/api/v1/getuserfriends/${this.state.username}`)
+      axios.get(`http://172.23.238.178:8080/api/v1/getuserfriends/${this.state.username}`)
       .then(res=>{
         this.setState(()=>({friends:res.data}))
       })
@@ -81,10 +81,10 @@ export default class User extends Component {
 
   removeFriend(friendId) {
     console.log(this.state.username + " removed " + friendId);
-    axios.delete(`http://localhost:8080/api/v1/deleteuserfriend/${this.state.username}/${friendId}`)
+    axios.delete(`http://172.23.238.178:8080/api/v1/deleteuserfriend/${this.state.username}/${friendId}`)
     .then(res =>{
       this.setState(()=>({user:res.data}))
-      axios.get(`http://localhost:8080/api/v1/getuserfriends/${this.state.username}`)
+      axios.get(`http://172.23.238.178:8080/api/v1/getuserfriends/${this.state.username}`)
       .then(res =>
         this.setState({
           friends: res.data
@@ -108,7 +108,7 @@ export default class User extends Component {
     this.setState({ searchValue: e.target.value });
   }
   handleSearchUser() {
-    axios.get(`http://localhost:8080/api/v1/searchusers/${this.state.username}/${this.state.searchValue}`)
+    axios.get(`http://172.23.238.178:8080/api/v1/searchusers/${this.state.username}/${this.state.searchValue}`)
       .then(res =>
       {
         let newSearched=res.data.filter(doc=>doc.username!==this.state.username) //&& doc.username!==friends.username
@@ -123,7 +123,7 @@ export default class User extends Component {
   }
   componentDidMount() {
     console.log('called componentDidMount()');
-    axios.get(`http://localhost:8080/api/v1/getUserDetails/${this.state.username}`)
+    axios.get(`http://172.23.238.178:8080/api/v1/getUserDetails/${this.state.username}`)
       .then(res =>
         this.setState({
           user: res.data,
@@ -131,7 +131,7 @@ export default class User extends Component {
       ).catch(err => {
         console.log("Error retreiving Info");
       });
-      axios.get(`http://localhost:8080/api/v1/getuserfriends/${this.state.username}`)
+      axios.get(`http://172.23.238.178:8080/api/v1/getuserfriends/${this.state.username}`)
       .then(res =>
         this.setState({
           friends: res.data
@@ -141,12 +141,12 @@ export default class User extends Component {
         });
   }
   changeUserPage() {
-    axios.get(`http://localhost:8080/api/v1/getUserDetails/${this.state.username}`)
+    axios.get(`http://172.23.238.178:8080/api/v1/getUserDetails/${this.state.username}`)
       .then(res =>{
         this.setState({
           user: res.data,
         })
-        axios.get(`http://localhost:8080/api/v1/getuserfriends/${this.state.username}`)
+        axios.get(`http://172.23.238.178:8080/api/v1/getuserfriends/${this.state.username}`)
         .then(res =>
           this.setState({
             friends: res.data
