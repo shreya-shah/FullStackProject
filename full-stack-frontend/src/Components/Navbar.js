@@ -48,7 +48,7 @@ export default class Navbar extends Component {
                         </li>
                         <li className="nav-item">
                             <button type="button" class="btn notification-btn">
-                                FaBell<span class="badge badge-light">4</span>
+                                <FaBell/><span class="badge badge-light">4</span>
                             </button>
                         </li>
                         <li className="nav-item">
