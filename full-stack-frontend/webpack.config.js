@@ -42,7 +42,7 @@ var config = {
         inline:true,
         port:8081
     },
-    mode:"development"
+    mode:"production"
 };
 
 module.exports = config;
