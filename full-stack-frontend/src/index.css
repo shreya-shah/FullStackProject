@@ -32,6 +32,10 @@ body{
   border: 1px solid #F3C3FD;
 }
 
+.notification-btn{
+  background: #F3C3FD;
+}
+
 .display-4{
   font-family: 'Satisfy', cursive;
   color: rgb(0, 0, 0);
