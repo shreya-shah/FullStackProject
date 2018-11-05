@@ -1,16 +1,16 @@
-import React,{Fragment} from 'react';
+import React, { Fragment } from 'react';
 import axios from 'axios';
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Redirect from 'react-router-dom/Redirect';
-export default class RegisterPage extends React.Component{
-    constructor(props){
+export default class RegisterPage extends React.Component {
+    constructor(props) {
         super();
         this.state = {
-            id:"",
-            description:"",
-            age:"",
-            name:"",
-            userCreated:false
+            id: "",
+            description: "",
+            age: "",
+            name: "",
+            userCreated: false
         }
     }
     handleChangeUsernameEntry(e) {
@@ -20,23 +20,26 @@ export default class RegisterPage extends React.Component{
         this.setState({ name: e.target.value });
     }
     handleChangeDescriptionEntry(e) {
-        this.setState({ description: e.target.value }); 
+        this.setState({ description: e.target.value });
     }
     handleChangeAgeEntry(e) {
-        this.setState({ age: e.target.value }); 
+        this.setState({ age: e.target.value });
     }
 
-    showAlert(){
+    showAlert() {
         alert(responseString);
     }
     addNewUser(e) {
+        const numImagesAvailable = 178;
+        let randomImageIndex = Math.floor(Math.random() * numImagesAvailable);
         e.preventDefault();
         console.log("Entering Add User");
         const newUser = {
             username: this.state.id,
-            description:this.state.description,
-            age:this.state.age,
-            name:this.state.name
+            description: this.state.description,
+            age: this.state.age,
+            name: this.state.name,
+            imageUrl: `https://source.unsplash.com/collection/895539/320x320/?sig=${randomImageIndex}`
         };
 
         axios.post('http://172.23.238.178:8080/api/v1/adduser', newUser)
@@ -48,8 +51,8 @@ export default class RegisterPage extends React.Component{
             });
 
     }
-    render(){
-        return(
+    render() {
+        return (
             <Fragment>
                 <div className="bg-image">
                     <h1 className="text-center register-logo text-light">Friend-Zone</h1>
@@ -59,7 +62,7 @@ export default class RegisterPage extends React.Component{
                             <input type="text" placeholder="Enter Username" className="form-control" onChange={this.handleChangeUsernameEntry.bind(this)} />
                             <input type="text" placeholder="Name" className="form-control" onChange={this.handleChangeNameEntry.bind(this)} />
                             <input type="text" placeholder="Enter Description" className="form-control" onChange={this.handleChangeDescriptionEntry.bind(this)} />
-                            <input type="text" placeholder="Enter Age" className="form-control" onChange={this.handleChangeAgeEntry.bind(this)}/>
+                            <input type="text" placeholder="Enter Age" className="form-control" onChange={this.handleChangeAgeEntry.bind(this)} />
                             <button type="submit" className="btn btn-info" >Register</button>
                         </form>
                     </div>

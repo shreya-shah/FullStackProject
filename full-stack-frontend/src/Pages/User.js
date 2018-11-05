@@ -10,6 +10,7 @@ export default class User extends Component {
     super(props);
     this.state = {
       user: "",
+      friendname:"",
       friends: [],
       searchValue: "",
       searchedUsers: [],

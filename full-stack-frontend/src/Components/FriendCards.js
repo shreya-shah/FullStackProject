@@ -18,7 +18,7 @@ export default class FriendCards extends Component {
         this.setState({
             showFriend: !showFriend
         });
-        this.props.changeUserPage();
+        // this.props.changeUserPage();
     }
 
     handleAddUser(e){
@@ -40,9 +40,9 @@ export default class FriendCards extends Component {
                         {this.props.display==="block"?<button href="#" className="btn btn-outline-danger" onClick={this.handleAddUser.bind(this)}><FaUserPlus/></button>:null}
                         
                     </h5>
-                    <a href="#" onClick={this.handleRemoveFriend.bind(this)} className="btn float-button btn-outline-danger text-dark"><strong>x</strong></a><br /><br />
+                    {this.props.isFriendPage?null:<a href="#" onClick={this.handleRemoveFriend.bind(this)} className="btn float-button btn-outline-danger text-dark"><strong>x</strong></a>}
                 </div>
-                {(this.state.showFriend) ? <Redirect to={{pathname:"/User",state:{username:this.props.friendId}}}/>: null}
+                {(this.state.showFriend) ? <Redirect to={{pathname:"/User/friend",state:{username:this.props.userId,friendname:this.props.friendId}}}/>: null}
             </div>
 
         );

@@ -12,7 +12,7 @@ export default class ProfileCard extends React.Component {
     render() {
         return (
             <div className="card profile-card text-dark">
-                <img className="card-img-top" src="https://i.imgur.com/oW1dGDI.jpg" alt="Profile Picture"></img>
+                <img className="card-img-top" src={this.props.userInfo.imageUrl} alt="Profile Picture"></img>
                 <div className="card-body text-center">
                     <h5 className="card-title">{this.props.userInfo.name}</h5>
                     <p className="card-text">{this.props.userInfo.description}</p>
