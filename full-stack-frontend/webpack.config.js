@@ -8,6 +8,7 @@ var config = {
     output: {
         path: DIST_DIR,
         filename: "bundle.js",
+        publicPath:'/public/'
     },
     module: {
         rules: [
