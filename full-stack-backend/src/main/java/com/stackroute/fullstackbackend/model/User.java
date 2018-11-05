@@ -15,7 +15,7 @@ public class User {
     private String name;
     private Integer age;
     private String birthdate;
-    //    private Image imageUrl;
+    private String imageUrl;
     private String description;
     @Relationship(type = "friend")
     public List<Long> friends=new ArrayList<>();
@@ -24,15 +24,14 @@ public class User {
     public User() {
     }
 
-
-    public User(Long id, String username, String name, Integer age, String birthdate, String description, List<Long> friends) {
+    public User(Long id, String username, String name, Integer age, String birthdate, String description, List<Long> friends, String imageUrl) {
         this.id = id;
         this.username = username;
         this.name = name;
         this.age = age;
         this.birthdate = birthdate;
         this.description = description;
-
+        this.imageUrl = imageUrl;
         this.friends =friends;
 
     }
@@ -85,8 +84,14 @@ public class User {
         this.description = description;
     }
 
+    public String getImageUrl() {
+        return imageUrl;
+    }
 
-
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+        
     public List<Long> getFriends() {
         return friends;
     }
